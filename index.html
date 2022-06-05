@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cy.handsOn('click')</title>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      #hidden-button, p {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>.click()</h1>
+    <div id="hidden-button">
+      <button onclick="onClickHandler()">Click me</button>
+    </div>
+    <div id="slow-content">
+      <br>
+    </div>
+    <div>
+      <br>
+      <button disabled="disabled" id="try-me" onclick="onClickHandler()">Try me</button>
+    </div>
+    <p>Yo!</p>
+    <script>
+      window.addEventListener('load', function() {
+        let randomNumberBetweenOneAndThree = Math.floor(Math.random() * 3) + 1
+        const slowContentDiv = document.getElementById('slow-content')
+        const slowButton = document.createElement('button')
+
+        setTimeout(function() {
+          slowButton.innerText = 'Hey, click me too!'
+          slowButton.onclick = onClickHandler
+          slowContentDiv.appendChild(slowButton)
+        }, randomNumberBetweenOneAndThree * 1000)
+
+        randomNumberBetweenOneAndThree = Math.floor(Math.random() * 3) + 1
+        const hiddenButton = document.getElementById('hidden-button')
+
+        setTimeout(function() {
+          hiddenButton.style.display = 'block'
+          document.getElementById('try-me').disabled = false
+        }, randomNumberBetweenOneAndThree * 1000)
+
+        randomNumberBetweenOneAndThree = Math.floor(Math.random() * 3) + 1
+
+        setTimeout(function() {
+          document.getElementById('try-me').disabled = false
+        }, randomNumberBetweenOneAndThree * 1000)
+      }, false)
+
+      function onClickHandler() {
+        document.querySelector('p').style.display = 'inline-block'
+      }
+    </script>
+  </body>
+</html>
