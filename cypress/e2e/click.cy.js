@@ -21,7 +21,7 @@ describe('click.cy.js', () => {
 
     it('"Try me" button', () => {
       cy.contains('button', 'Try me')
-        .should('be.enabled')
+        .should('be.enabled') // This is an extra assertion, but the code should work without it
         .click()
 
       cy.contains('p', 'Yo!').should('be.visible')
