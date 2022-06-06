@@ -35,14 +35,4 @@ describe('click.cy.js', () => {
       cy.contains('p', 'Yo!').should('be.visible')
     })
   })
-
-  context('Forces click on disabled button', () => {
-    it('"Try me" - force: true', () => {
-      cy.contains('button', 'Try me')
-        .should('be.enabled')
-        .click({ force: true })
-
-      cy.contains('p', 'Yo!').should('be.visible')
-    })
-  })
 })
