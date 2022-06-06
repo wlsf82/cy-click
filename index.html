@@ -26,7 +26,7 @@
     <p>Yo!</p>
     <script>
       window.addEventListener('load', function() {
-        let randomNumberBetweenOneAndThree = Math.floor(Math.random() * 3) + 1
+        let randomNumberBetweenOneAndThree = randomNumberBetweenOneAndN(3)
         const slowContentDiv = document.getElementById('slow-content')
         const slowButton = document.createElement('button')
 
@@ -36,7 +36,7 @@
           slowContentDiv.appendChild(slowButton)
         }, randomNumberBetweenOneAndThree * 1000)
 
-        randomNumberBetweenOneAndThree = Math.floor(Math.random() * 3) + 1
+        randomNumberBetweenOneAndThree = randomNumberBetweenOneAndN(3)
         const hiddenButton = document.getElementById('hidden-button')
 
         setTimeout(function() {
@@ -44,7 +44,7 @@
           document.getElementById('try-me').disabled = false
         }, randomNumberBetweenOneAndThree * 1000)
 
-        randomNumberBetweenOneAndThree = Math.floor(Math.random() * 3) + 1
+        randomNumberBetweenOneAndThree = randomNumberBetweenOneAndN(3)
 
         setTimeout(function() {
           document.getElementById('try-me').disabled = false
@@ -53,6 +53,10 @@
 
       function onClickHandler() {
         document.querySelector('p').style.display = 'inline-block'
+      }
+
+      function randomNumberBetweenOneAndN(n) {
+        return Math.floor(Math.random() * n) + 1
       }
     </script>
   </body>
