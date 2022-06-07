@@ -6,7 +6,7 @@ describe('click.cy.js', () => {
   context('Only clicks on existing, visible and/or enabled buttons', () => {
     it('"Click me" button', () => {
       cy.contains('button', 'Click me')
-        .should('be.visible')
+        .should('be.visible') // https://docs.cypress.io/guides/core-concepts/retry-ability#Why-are-some-commands-NOT-retried
         .click()
 
       cy.contains('p', 'Yo!').should('be.visible')
