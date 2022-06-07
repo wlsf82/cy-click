@@ -3,7 +3,7 @@ describe('click.cy.js', () => {
     cy.visit('/')
   })
 
-  context('Only clicks on visible and/or enabled buttons', () => {
+  context('Only clicks on existing, visible and/or enabled buttons', () => {
     it('"Click me" button', () => {
       cy.contains('button', 'Click me')
         .should('be.visible')
