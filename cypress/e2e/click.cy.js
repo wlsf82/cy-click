@@ -29,7 +29,7 @@ describe('click.cy.js', () => {
     })
   })
 
-  context('Forces click before button visibility', () => {
+  context("Forces click before the button's visibility", () => {
     it('"Click me" button - force: true', () => {
       cy.contains('button', 'Click me')
         .click({ force: true })
@@ -38,7 +38,7 @@ describe('click.cy.js', () => {
     })
   })
 
-  context('Forces click while button is disabled', () => {
+  context('Forces click while the button is disabled', () => {
     it('"Try me" button - force: true', () => {
       cy.contains('button', 'Try me')
         .click({ force: true })
@@ -47,7 +47,7 @@ describe('click.cy.js', () => {
     })
   })
 
-  context('Clicks on button through its icon', () => {
+  context('Clicks on the button through its icon', () => {
     it('🏠 button', () => {
       cy.get('#home').click() // https://docs.cypress.io/guides/core-concepts/interacting-with-elements#Covering
 
