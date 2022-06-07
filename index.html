@@ -6,15 +6,18 @@
       * {
         font-family: sans-serif;
       }
-      #hidden-button, p {
+      #not-visible-button, p {
         display: none;
+      }
+      #hidden-button {
+        visibility: hidden;
       }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <h1>.click()</h1>
-    <div id="hidden-button">
+    <div id="not-visible-button">
       <button onclick="onClickHandler()">Click me</button>
     </div>
     <div id="slow-content">
@@ -30,6 +33,10 @@
         <i class="fa fa-home"></i>
       </button>
     </div>
+    <div id="hidden-button">
+      <br>
+      <button onclick="onClickHandler()">I'm hidden</button>
+    </div>
     <p>Yo!</p>
     <script>
       window.addEventListener('load', function() {
@@ -44,7 +51,7 @@
         }, randomNumberBetweenOneAndThree * 1000)
 
         randomNumberBetweenOneAndThree = randomNumberBetweenOneAndN(3)
-        const hiddenButton = document.getElementById('hidden-button')
+        const hiddenButton = document.getElementById('not-visible-button')
 
         setTimeout(function() {
           hiddenButton.style.display = 'block'

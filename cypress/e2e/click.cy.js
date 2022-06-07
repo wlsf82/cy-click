@@ -36,6 +36,13 @@ describe('click.cy.js', () => {
 
       cy.contains('p', 'Yo!').should('be.visible')
     })
+
+    it('"I\'m, hidden" button - force: true', () => {
+      cy.contains('button', "I'm hidden")
+        .click({ force: true })
+
+      cy.contains('p', 'Yo!').should('be.visible')
+    })
   })
 
   context('Forces click while the button is disabled', () => {
