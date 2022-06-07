@@ -62,7 +62,7 @@ describe('click.cy.js', () => {
     })
   })
 
-  context('Shows button before clicking on it', () => {
+  context('Shows the button before clicking on it', () => {
     it('"I\'m, hidden" button', () => {
       cy.get('#hidden-button')
         .invoke('attr', 'style', 'visibility:visible')
