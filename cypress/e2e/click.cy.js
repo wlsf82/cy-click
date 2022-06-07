@@ -14,6 +14,7 @@ describe('click.cy.js', () => {
 
     it('"Hey, click me too!" button', () => {
       cy.contains('button', 'click me too')
+        .should('exist') // This is an extra assertion, but the code should work without it
         .click() // on.cypress.io/interacting-with-elements
 
       cy.contains('p', 'Yo!').should('be.visible')
