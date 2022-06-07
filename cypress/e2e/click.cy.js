@@ -61,4 +61,15 @@ describe('click.cy.js', () => {
       cy.contains('p', 'Yo!').should('be.visible')
     })
   })
+
+  context('Shows button before clicking on it', () => {
+    it('"I\'m, hidden" button', () => {
+      cy.get('#hidden-button')
+        .invoke('attr', 'style', 'visibility:visible')
+        .find('button')
+        .click()
+
+      cy.contains('p', 'Yo!').should('be.visible')
+    })
+  })
 })
