@@ -2,7 +2,7 @@
 
 ![Test status](https://github.com/wlsf82/cy-click/actions/workflows/ci.yml/badge.svg)
 
-Sample project to demonstrate different situations when clicking with Cypress.
+Sample project to demonstrate different situations of clicking with Cypress.
 
 ## Pre-requirements
 

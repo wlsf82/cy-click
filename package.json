@@ -1,7 +1,7 @@
 {
   "name": "cy-click",
   "version": "1.0.0",
-  "description": "Sample project to demonstrate different situations when clicking with Cypress",
+  "description": "Sample project to demonstrate different situations of clicking with Cypress",
   "main": "index.html",
   "scripts": {
     "cy:open": "cypress open",
