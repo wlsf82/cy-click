@@ -38,6 +38,15 @@ describe('click.cy.js', () => {
     })
   })
 
+  context('Forces click while button is disabled', () => {
+    it('"Try me" button - force: true', () => {
+      cy.contains('button', 'Try me')
+        .click({ force: true })
+
+      cy.contains('p', 'Yo!').should('not.be.visible')
+    })
+  })
+
   context('Clicks on button through its icon', () => {
     it('🏠 button', () => {
       cy.get('#home').click() // https://docs.cypress.io/guides/core-concepts/interacting-with-elements#Covering
