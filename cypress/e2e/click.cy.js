@@ -67,6 +67,7 @@ describe('click.cy.js', () => {
       cy.get('#hidden-button')
         .invoke('attr', 'style', 'visibility:visible')
         .find('button')
+        .invoke('text', 'I was hidden')
         .click()
 
       cy.contains('p', 'Yo!').should('be.visible')
