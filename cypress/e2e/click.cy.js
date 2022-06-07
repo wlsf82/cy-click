@@ -30,7 +30,7 @@ describe('click.cy.js', () => {
   })
 
   context('Forces click before button visibility', () => {
-    it('"Click me button" - force: true', () => {
+    it('"Click me" button - force: true', () => {
       cy.contains('button', 'Click me')
         .click({ force: true })
 
