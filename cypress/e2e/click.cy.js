@@ -37,4 +37,12 @@ describe('click.cy.js', () => {
       cy.contains('p', 'Yo!').should('be.visible')
     })
   })
+
+  context('Clicks on button through its icon', () => {
+    it('🏠 button', () => {
+      cy.get('#home').click() // https://docs.cypress.io/guides/core-concepts/interacting-with-elements#Covering
+
+      cy.contains('p', 'Yo!').should('be.visible')
+    })
+  })
 })
