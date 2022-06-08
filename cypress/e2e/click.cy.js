@@ -6,15 +6,15 @@ describe('click.cy.js', () => {
   context('Only clicks on existing, visible and/or enabled buttons', () => {
     it('"Click me" button', () => {
       cy.contains('button', 'Click me')
-        .should('be.visible') // https://docs.cypress.io/guides/core-concepts/retry-ability#Why-are-some-commands-NOT-retried
-        .click()
+        .should('be.visible') // https://docs.cypress.io/guides/core-concepts/retry-ability#Why-are-some-commands-NOT-retried // on.cypress.io/interacting-with-elements
+        .click() // show commeting the above line and forcing the click.
 
       cy.contains('p', 'Yo!').should('be.visible')
     })
 
     it('"Hey, click me too!" button', () => {
       cy.contains('button', 'click me too')
-        .should('exist') // This is an extra assertion, but the code should work without it
+        .should('exist') // This is an extra assertion, but the code should work without it // This could also be a .should('be.visible')
         .click() // on.cypress.io/interacting-with-elements
 
       cy.contains('p', 'Yo!').should('be.visible')
