@@ -72,5 +72,14 @@ describe('click.cy.js', () => {
 
       cy.contains('p', 'Yo!').should('be.visible')
     })
+
+    it('"Click me" button', () => {
+      cy.get('#not-visible-button')
+        .invoke('show')
+        .find('button:contains(Click me)')
+        .click()
+
+      cy.contains('p', 'Yo!').should('be.visible')
+    })
   })
 })
