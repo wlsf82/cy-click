@@ -1,6 +1,6 @@
 describe('click.cy.js', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('./index.html')
   })
 
   context('Only clicks on existing, visible and/or enabled buttons', () => {
